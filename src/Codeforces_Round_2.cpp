@@ -19,7 +19,7 @@ int main() {
             cin >> input;
 
             cout << input << "a" << "\n";
-            return 0;
+            continue;
         }
 
         vector<string> input(n - 2);
@@ -29,21 +29,23 @@ int main() {
         string output;
         output += input[0][0];
         int counter = 1;
-        for (int j = 0; j < input.size(); ++j) {
-            if (j < input.size() - 1 && input[j][1] == input[j + 1][0]){
+        for (int j = 0; j < input.size() - 1; ++j) {
+            if (input[j][1] == input[j + 1][0]){
                 output += input[j][1];
-                ++counter;
-            } else if (j < input.size() - 1 && input[j][1] != input[j + 1][0]){
-                output += input[j][1];
-                output += input[j + 1][0];
                 ++counter;
             } else {
                 output += input[j][1];
-                counter++;
+                output += input[j + 1][0];
+                counter += 2;
             }
         }
 
-        if (counter < n - 1) {
+        if (counter == n - 1) {
+            output += input[input.size() - 1][1];
+        }
+
+        if (counter == n - 2) {
+            output += input[input.size() - 1][1];
             output += input[input.size() - 1][1];
         }
 
