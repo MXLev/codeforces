@@ -12,12 +12,8 @@ int main(){
     string input;
     cin >> input;
     int counter = 0;
-    for (int i = 1, j = 0; i < n; ++i){
-        if (input[j] != input[i]){
-            j++;
-            i = j;
-
-        } else {
+    for (int i = 0; i < n - 1; ++i){
+        if (input[i] == input[i + 1]){
             counter++;
         }
     }
