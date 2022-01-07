@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(codeforces)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(_4A src/_4A.cpp)
 add_executable(_71A src/_71A.cpp)
@@ -19,3 +19,5 @@ add_executable(_112A src/_122A.cpp)
 add_executable(_339A src/_339A.cpp)
 add_executable(_281A src/_281A.cpp)
 add_executable(_266A src/_266A.cpp)
+add_executable(_236A src/_236.cpp)
+add_executable(_791A src/_791A.cpp)

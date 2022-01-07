@@ -3,7 +3,7 @@
 ### Results
 | Overall |
 |---------|
-| 10      |
+| 12      |
 
 ### Problems
 | ID   | Name                                                                             |
@@ -18,6 +18,9 @@
 | 112A | [ Петя и строки ](https://codeforces.com/problemset/problem/112/A)               |
 | 339A | [ Математика спешит на помощь ](https://codeforces.com/problemset/problem/339/A) |
 | 281A | [ Капитализация слова ](https://codeforces.com/problemset/problem/281/A)         |
+| 266A | [ Камни на столе ](https://codeforces.com/problemset/problem/266/A)              |
+| 236A | [ Девушка или Юноша ](https://codeforces.com/problemset/problem/236/A)           |
+| 791A | [ Мишка и старший брат ](https://codeforces.com/problemset/problem/791/A)        |
 
 ### resolved competitions
 | DIV     | id    | resolved problems |
