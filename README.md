@@ -26,6 +26,9 @@
 | 617A | [ Слоник ](https://codeforces.com/problemset/problem/617/A)                      |
 | 977A | [ Неправильное вычитание ](https://codeforces.com/problemset/problem/977/A)      |
 | 116A | [ Трамвай ](https://codeforces.com/problemset/problem/116/A)                     |
+| 266B | [ Очередь в школе ](https://codeforces.com/problemset/problem/266/B)             |
+| 110A | [ Почти счастливое число ](https://codeforces.com/problemset/problem/110/A)      |
+| 41A  | [ Перевод ](https://codeforces.com/problemset/problem/41/A)                      |
 
 ### resolved competitions
 | DIV     | id    | resolved problems |
