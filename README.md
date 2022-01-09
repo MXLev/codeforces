@@ -3,7 +3,7 @@
 ### Results
 | Overall |
 |---------|
-| 17      |
+| 18      |
 
 ### Problems
 | ID   | Name                                                                             |
@@ -25,6 +25,7 @@
 | 59A  | [ Слово ](https://codeforces.com/problemset/problem/59/A)                        |
 | 617A | [ Слоник ](https://codeforces.com/problemset/problem/617/A)                      |
 | 977A | [ Неправильное вычитание ](https://codeforces.com/problemset/problem/977/A)      |
+| 116A | [ Трамвай ](https://codeforces.com/problemset/problem/116/A)                     |
 
 ### resolved competitions
 | DIV     | id    | resolved problems |
