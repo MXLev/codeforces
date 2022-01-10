@@ -3,7 +3,7 @@
 ### Results
 | Overall |
 |---------|
-| 18      |
+| 24      |
 
 ### Problems
 | ID   | Name                                                                             |
@@ -28,7 +28,10 @@
 | 116A | [ Трамвай ](https://codeforces.com/problemset/problem/116/A)                     |
 | 266B | [ Очередь в школе ](https://codeforces.com/problemset/problem/266/B)             |
 | 110A | [ Почти счастливое число ](https://codeforces.com/problemset/problem/110/A)      |
-| 41A  | [ Перевод ](https://codeforces.com/problemset/problem/41/A)                      |
+| 734A | [ Антон и Даник ](https://codeforces.com/problemset/problem/734/A)               |
+| 271A | [ Красивый год ](https://codeforces.com/problemset/problem/271/A)                |
+| 677A | [ Ваня и забор ](https://codeforces.com/problemset/problem/677/A)                |
+| 467A | [ Юра и заселение ](https://codeforces.com/problemset/problem/467/A)             |
 
 ### resolved competitions
 | DIV     | id    | resolved problems |
@@ -36,3 +39,4 @@
 | Div. 3  | #760  | 2                 |
 | Div. 3  | #1619 | 1                 |
 | No Div. | #1621 | 0                 |
+| Div. 3  | #1624 | 1                 |
