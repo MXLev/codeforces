@@ -12,26 +12,27 @@ int main() {
     cin >> n;
     vector<int> events(n);
     vector<int> police;
-    int free_police = 0;
     for (int i = 0; i < n; ++i) {
         cin >> events[i];
-        if (events[i] == 1){
+        int temp = events[i];
+        while (temp > 0){
             police.push_back(i);
-            free_police += events[i];
+            temp--;
         }
     }
     int crimes = 0;
     for (int i = 0; i < n; ++i) {
         if (events[i] == -1){
+            bool breaked = false;
             for (int j = 0; j < police.size(); ++j) {
                 if (police[j] < i){
-                    crimes--;
                     police[j] = n + 1;
-                    break;
-                } else if (police[j] > j){
-                    crimes++;
+                    breaked = true;
                     break;
                 }
+            }
+            if (!breaked){
+                crimes++;
             }
         }
     }
