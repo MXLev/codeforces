@@ -14,22 +14,21 @@ int main(){
     for (int i = 0; i < t; ++i) {
         int n;
         cin >> n;
-        vector<int> arr(n);
+        vector<pair<int, int>> arr(n);
         for (int j = 0; j < n; ++j) {
-            cin >> arr[j];
+            cin >> arr[j].first;
+            arr[j].second = j;
         }
+        sort(arr.begin(), arr.end());
         for (int j = 1; j < n - 1; ++j) {
-            if (arr[j] != arr[j + 1]){
-                if (arr[j] != arr[j - 1]){
-                    cout << j + 1 << '\n';
+            if (arr[j].first != arr[j - 1].first){
+                if (arr[j].first != arr[j + 1].first){
+                    cout << arr[j].second + 1 << '\n';
                     break;
                 } else {
-                    cout << j << '\n';
+                    cout << arr[j].second << '\n';
                     break;
                 }
-            } else if (arr[j] != arr[j - 1]){
-                cout << j + 1 << '\n';
-                break;
             }
         }
     }
