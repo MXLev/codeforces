@@ -11,7 +11,7 @@ using namespace std;
 int main(){
     int t;
     cin >> t;
-    for (int i = 0; i < t; ++i) {
+    for (int q = 0; q < t; ++q) {
         int n;
         cin >> n;
         vector<pair<int, int>> arr(n);
@@ -20,15 +20,16 @@ int main(){
             arr[j].second = j;
         }
         sort(arr.begin(), arr.end());
-        for (int j = 1; j < n - 1; ++j) {
-            if (arr[j].first != arr[j - 1].first){
-                if (arr[j].first != arr[j + 1].first){
-                    cout << arr[j].second + 1 << '\n';
-                    break;
-                } else {
-                    cout << arr[j].second << '\n';
-                    break;
+        for (int i = 0; i < n; ++i) {
+            int same = 0;
+            for (int j = i; j < n - 1; ++j) {
+                if (arr[j].first == arr[j + 1].first){
+                    same++;
                 }
+            }
+            if (same != n - 2){
+                cout << arr[i].second << '\n';
+                break;
             }
         }
     }
