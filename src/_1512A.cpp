@@ -19,16 +19,16 @@ int main(){
             cin >> arr[j].first;
             arr[j].second = j;
         }
-        sort(arr.begin(), arr.end());
+        //sort(arr.begin(), arr.end());
         for (int i = 0; i < n; ++i) {
             int same = 0;
-            for (int j = i; j < n - 1; ++j) {
-                if (arr[j].first == arr[j + 1].first){
+            for (int j = 0; j < n; ++j) {
+                if (arr[i].first == arr[j].first){
                     same++;
                 }
             }
-            if (same != n - 2){
-                cout << arr[i].second << '\n';
+            if (same != n - 1){
+                cout << arr[i].second + 1 << '\n';
                 break;
             }
         }
