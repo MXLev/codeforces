@@ -3,7 +3,7 @@
 ### Results
 | Overall |
 |---------|
-| 35      |
+| 69      |
 
 ### Problems
 | ID    | Name                                                                             |
@@ -41,8 +41,28 @@
 | 705A  | [ Халк ](https://codeforces.com/problemset/problem/705/A)                        |
 | 228A  | [ Не смешите мои подковы ](https://codeforces.com/problemset/problem/228/A)      |
 | 496A  | [ I Wanna Be the Guy ](https://codeforces.com/problemset/problem/496/A)          |
-| 144A  | [ Задача о делимости ](https://codeforces.com/problemset/problem/144/A)          |
+| 144A  | [ Приезд генерала ](https://codeforces.com/problemset/problem/144/A)             |
 | 1328A | [ Задача о делимости ](https://codeforces.com/problemset/problem/1328/A)         |
+| 443A  | [ Антон и буквы ](https://codeforces.com/problemset/problem/443/A)               |
+| 268A  | [ Матчи ](https://codeforces.com/problemset/problem/1328/A)                      |
+| 520A  | [ Задача о делимости ](https://codeforces.com/problemset/problem/1328/A)         |
+| 996A  | [ Антон и буквы ](https://codeforces.com/problemset/problem/1328/A)         |
+| 141A  | [ Матчи ](https://codeforces.com/problemset/problem/1328/A)         |
+| 785A  | [ Панграмма ](https://codeforces.com/problemset/problem/1328/A)         |
+| 510A  | [ Выиграть в лотерею ](https://codeforces.com/problemset/problem/1328/A)         |
+| 155A  | [ Веселая шутка ](https://codeforces.com/problemset/problem/1328/A)         |
+| 750A  | [ Антон и многогранники ](https://codeforces.com/problemset/problem/1328/A)         |
+| 581A  | [ Лиса и змейка ](https://codeforces.com/problemset/problem/1328/A)         |
+| 427A  | [ I_love_\%username\% ](https://codeforces.com/problemset/problem/1328/A)         |
+| 1399A | [ Новый год и спешка ](https://codeforces.com/problemset/problem/1328/A)         |
+| 723A  | [ Хипстер Вася ](https://codeforces.com/problemset/problem/1328/A)         |
+| 758A  | [ Полицейские-рекруты ](https://codeforces.com/problemset/problem/1328/A)         |
+| 490A  | [ Уроки дизайна задач: учимся у математики ](https://codeforces.com/problemset/problem/1328/A)         |
+| 1353B | [ Новый год: встреча друзей ](https://codeforces.com/problemset/problem/1328/A)         |
+| 1374A | [ Короткие подстроки ](https://codeforces.com/problemset/problem/1328/A)         |
+| 1520A | [ Выбор команд ](https://codeforces.com/problemset/problem/1328/A)         |
+| 1360A | [ Праздник равенства ](https://codeforces.com/problemset/problem/1328/A)         |
+| 151A  | [ Командная олимпиада ](https://codeforces.com/problemset/problem/1328/A)         |
 
 ### resolved competitions
 | DIV     | id    | resolved problems |
@@ -50,4 +70,6 @@
 | Div. 3  | #760  | 2                 |
 | Div. 3  | #1619 | 1                 |
 | No Div. | #1621 | 0                 |
-| Div. 3  | #1624 | 1                 |
+| Div. 2  | #1624 | 1                 |
+| Div. 2  | #1624 | 1                 |
+| Div. 2  | #1624 | 1                 |
