@@ -13,13 +13,14 @@ int main() {
     for (int q = 0; q < t; ++q) {
         int k;
         cin >> k;
-        int asnw = 1;
+        int answ = 0;
         for (int i = 0; i < k; ++i) {
-            basic_string<char> str = to_string(asnw);
-            if (asnw % 3 == 0 || str[str.size() - 1] == '3'){
-                asnw++;
+            answ++;
+            basic_string<char> str = to_string(answ);
+            if (answ % 3 == 0 || str[str.size() - 1] == '3'){
+                i--;
             }
         }
-        cout << asnw << '\n';
+        cout << answ << '\n';
     }
 }
