@@ -66,11 +66,11 @@ int main() {
             ll min_people = bossHeath[i] / damage[j];
             calculator(min_people, i, j);
         }
-    }
-    sort(answers.begin(), answers.end());
-    if (answers[0] == money + 1){
-        cout << -1;
-    } else {
-        cout << answers[0];
+        sort(answers.begin(), answers.end());
+        if (answers[0] == money + 1){
+            cout << -1;
+        } else {
+            cout << answers[0] << ' ';
+        }
     }
 }
