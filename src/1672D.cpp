@@ -5,28 +5,32 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#define ll long long
+#include <cmath>
+
 #define pb push_back
 
 using namespace std;
 
-long long n = 0, money = 0;
-vector<long long> cost;
-vector<long long> damage;
-vector<long long> health;
+typedef long long ll;
+typedef long double ld;
 
-long long m = 0;
-vector<long long> bossDamage;
-vector<long long> bossHeath;
-vector<long long> answers;
+ll n = 0, money = 0;
+vector<ll> cost;
+vector<ll> damage;
+vector<ll> health;
+
+ll m = 0;
+vector<ll> bossDamage;
+vector<ll> bossHeath;
+vector<ll> answers;
 
 
-int calculator(ll min_people, ll i, ll j){
+int calculator(ld min_people, ll i, ll j){
     if (min_people * cost[j] > money){
         answers.pb(money + 1);
         return 0;
     } else if (min_people * cost[j] == money){
-        if (health[j] / bossDamage[i] < bossHeath[i] / (damage[j] * min_people)){
+        if ((ld)health[j] / (ld)bossDamage[i] > (ld)bossHeath[i] / ((ld)damage[j] * min_people)){
             answers.pb(min_people * cost[j]);
             return 0;
         } else {
@@ -34,8 +38,9 @@ int calculator(ll min_people, ll i, ll j){
             return 0;
         }
     } else if (min_people * cost[i] < money){
-        if (health[j] / bossDamage[i] < bossHeath[i] / (damage[j] * min_people)){
+        if ((ld)health[j] / (ld)bossDamage[i] > (ld)bossHeath[i] / ((ld)damage[j] * min_people)){
             answers.pb(min_people * cost[j]);
+            return 0;
         } else {
             calculator(min_people + 1, i, j);
         }
@@ -46,29 +51,29 @@ int calculator(ll min_people, ll i, ll j){
 int main() {
     cin >> n >> money;
     for (ll i = 0; i < n; ++i) {
-        int tcost, tdamage, thealth;
-        cin >> tcost >> tdamage >> thealth;
-        cost.pb(tcost);
-        damage.pb(tdamage);
-        health.pb(thealth);
+        ll c, d, h;
+        cin >> c >> d >> h;
+        cost.pb(c);
+        damage.pb(d);
+        health.pb(h);
     }
 
     cin >> m;
     for (ll i = 0; i < m; ++i) {
-        int tbossDamage, tbossHeath;
-        cin >> tbossDamage >> tbossHeath;
-        bossDamage.pb(tbossDamage);
-        bossHeath.pb(tbossHeath);
+        ll D, H;
+        cin >> D >> H;
+        bossDamage.pb(D);
+        bossHeath.pb(H);
     }
 
     for (ll i = 0; i < m; ++i) {
         for (ll j = 0; j < n; ++j) {
-            ll min_people = bossHeath[i] / damage[j];
+            ll min_people = ceil((ld)bossHeath[i] / (ld)damage[j]);
             calculator(min_people, i, j);
         }
         sort(answers.begin(), answers.end());
-        if (answers[0] == money + 1){
-            cout << -1;
+        if (answers[0] > money){
+            cout << -1 << ' ';
         } else {
             cout << answers[0] << ' ';
         }
