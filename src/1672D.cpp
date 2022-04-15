@@ -29,22 +29,12 @@ int calculator(ld min_people, ll i, ll j){
     if (min_people * cost[j] > money){
         answers.pb(money + 1);
         return 0;
-    } else if (min_people * cost[j] == money){
-        if ((ld)health[j] / (ld)bossDamage[i] > (ld)bossHeath[i] / ((ld)damage[j] * min_people)){
-            answers.pb(min_people * cost[j]);
-            return 0;
-        } else {
-            answers.pb(money + 1);
-            return 0;
-        }
-    } else if (min_people * cost[i] < money){
-        if ((ld)health[j] / (ld)bossDamage[i] > (ld)bossHeath[i] / ((ld)damage[j] * min_people)){
-            answers.pb(min_people * cost[j]);
-            return 0;
-        } else {
-            calculator(min_people + 1, i, j);
-        }
     }
+    if ((ld)health[j] / (ld)bossDamage[i] > (ld)bossHeath[i] / ((ld)damage[j] * min_people)){
+        answers.pb(min_people * cost[j]);
+        return 0;
+    }
+    calculator(min_people + 1, i, j);
     return 0;
 }
 
@@ -77,5 +67,6 @@ int main() {
         } else {
             cout << answers[0] << ' ';
         }
+        answers.assign(0, 0);
     }
 }
