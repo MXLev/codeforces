@@ -29,7 +29,8 @@ int main() {
     vector<vector<char>> screen(u, vector<char> (d));
     for (int r = 0; r < u; ++r) {
         for (int c = 0; c < d; ++c) {
-            cin >> screen[r][c];
+            cin >> screen[r
+            ][c];
         }
     }
 
