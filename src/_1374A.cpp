@@ -15,6 +15,6 @@ int main(){
     for (int z = 0; z < t; ++z) {
         int x, y, n;
         cin >> x >> y >> n;
-        cout <<
+        cout << (((n - y) / x) * x) + y << '\n';
     }
 }

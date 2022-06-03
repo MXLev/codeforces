@@ -1,6 +1,6 @@
 //
 // https://codeforces.com/problemset/problem/1399/A
-//
+// https://codeforces.com/problemset/problem/1399/A
 
 #include <iostream>
 #include <vector>
@@ -18,23 +18,23 @@ int main() {
             cout << "YES" << '\n';
             continue;
         }
-        vector<int> arr(n);
+        vector<int> a(n);
         for (int i = 0; i < n; ++i) {
-            cin >> arr[i];
+            cin >> a[i];
         }
-        sort(arr.begin(), arr.end());
-        bool breaked = true;
+        sort(a.begin(), a.end());
+        bool broken = false;
         for (int i = 0; i < n - 1; ++i) {
-            if (arr[i] + 1 == arr[i + 1]){
-                breaked = false;
-            } else if (arr[i] == arr[i + 1]){
-                breaked = false;
+            if (a[i] + 1 == a[i + 1]){
+                broken = false;
+            } else if (a[i] == a[i + 1]){
+                broken = false;
             } else {
-                breaked = true;
+                broken = true;
                 break;
             }
         }
-        if (!breaked){
+        if (!broken){
             cout << "YES" << '\n';
         } else {
             cout << "NO" << '\n';

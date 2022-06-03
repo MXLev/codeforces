@@ -6,17 +6,14 @@
 
 using namespace std;
 
-int main() {
+int main(){
     int k, r;
     cin >> k >> r;
-    k -= r;
-    if ((k + r) % 10 != 0 && (k + r) < k - (k % 10)){
-        k += r;
+    int num = k;
+    int answ = 1;
+    while (num % 10 != 0 && (num - r) % 10 != 0){
+        answ++;
+        num = k * answ;
     }
-    long long counter = 0;
-    while (k % 10 != 0){
-        r *= 2;
-        counter++;
-    }
-    cout << counter;
+    cout << answ;
 }
