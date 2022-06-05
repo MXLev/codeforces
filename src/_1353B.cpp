@@ -7,57 +7,78 @@
 
 using namespace std;
 
-int minFinder(vector<int> a, int n){
-    int min = 31;
-    int min_index = 0;
-    for (int i = 0; i < n; ++i) {
-        if (a[i] < min){
-            min = a[i];
-            min_index = i;
-        }
-    }
-    return min_index;
-}
-int maxFinder(vector<int> b, int n){
-    int max = 0;
-    int max_index = 0;
-    for (int i = 0; i < n; ++i) {
-        if (b[i] > max){
-            max = b[i];
-            max_index = i;
-        }
-    }
-    return max_index;
-}
-
 int main() {
     int t;
     cin >> t;
-    for (int i = 0; i < t; ++i) {
+    for (int q = 0; q < t; ++q) {
         int n, k;
         cin >> n >> k;
         vector<int> a(n);
         vector<int> b(n);
-        for (int j = 0; j < n; ++j) {
-            cin >> a[j];
+        int suma = 0, sumb = 0;
+        for (int i = 0; i < n; ++i) {
+            cin >> a[i];
+            suma += a[i];
         }
-        for (int j = 0; j < n; ++j) {
-            cin >> b[j];
+        for (int i = 0; i < n; ++i) {
+            cin >> b[i];
+            sumb += b[i];
         }
-        for (int j = 0; j < k; ++j) {
-            int max_index = maxFinder(b, n);
-            int min_index = minFinder(a, n);
-            if (a[min_index] >= b[max_index]){
-                break;
+        if (suma > sumb){
+            for (int i = 0; i < k; ++i) {
+                int max = 0, maxIndex = 0;
+                for (int j = 0; j < n; ++j) {
+                    if (a[j] > max){
+                        max = a[j];
+                        a[j] = 31;
+                        maxIndex = j;
+                    }
+                }
+                int min = 31, minIndex = 0;
+                for (int j = 0; j < n; ++j) {
+                    if (b[j] < min){
+                        min = b[j];
+                        b[j] = 31;
+                        minIndex = j;
+                    }
+                }
+                int c = a[maxIndex];
+                a[maxIndex] = b[minIndex];
+                b[minIndex] = c;
             }
-            int temp = b[max_index];
-            b[max_index] = a[min_index];
-            a[min_index] = temp;
+
+            int sumAnsw = 0;
+            for (int i = 0; i < n; ++i) {
+                sumAnsw += a[i];
+            }
+            cout << sumAnsw << '\n';
+        } else {
+            int max = 0, maxIndex = 0;
+            for (int j = 0; j < n; ++j) {
+                if (b[j] > max){
+                    max = b[j];
+                    b[j] = 31;
+                    maxIndex = j;
+                }
+            }
+            int min = 31, minIndex = 0;
+            for (int j = 0; j < n; ++j) {
+                if (a[j] < min){
+                    min = a[j];
+                    a[j] = 31;
+                    minIndex = j;
+                }
+            }
+            int c = b[maxIndex];
+            b[maxIndex] = a[minIndex];
+            a[minIndex] = c;
+
+            int sumAnsw = 0;
+            for (int i = 0; i < n; ++i) {
+                sumAnsw += b[i];
+            }
+            cout << sumAnsw << '\n';
         }
-        int sumA = 0;
-        for (int j = 0; j < n; ++j) {
-            sumA += a[j];
-        }
-        cout << sumA << '\n';
+
     }
 }
