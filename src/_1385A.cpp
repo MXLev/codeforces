@@ -23,7 +23,9 @@ int main() {
         if (x == z){
             b = x;
         } else {
-            a = x;
+            a = x
+
+
             c = z;
         }
         if (y == z){
