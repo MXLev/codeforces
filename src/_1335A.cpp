@@ -12,8 +12,17 @@ int main() {
     int t;
     cin >> t;
     for (int q = 0; q < t; ++q) {
-        float n;
+        long long n;
         cin >> n;
-        cout << n / 2 - 1 << '\n';
+        int b = n << 1;
+        if (n - b > b){
+            if (n - (b + 1) > (b + 1)){
+                cout << (n << 1) + 1 << '\n';
+            } else {
+                cout << (n << 1) << '\n';
+            }
+        } else {
+            cout << (n >> 1) - 1 << '\n';
+        }
     }
 }
