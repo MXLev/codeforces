@@ -6,7 +6,6 @@
 #include <algorithm>
 #include <cmath>
 
-
 using namespace std;
 
 int main() {
@@ -17,7 +16,7 @@ int main() {
         if (i == 0){
             answ += min(abs('a' - word[i]), abs(word[i] - 'a' - 48)) + 1;
         } else {
-            answ += min(abs(word[i - 1] - word[i]), abs(word[i] - word[i - 1])) + 1;
+            answ += min(abs(word[i - 1] - word[i]), abs(word[i] - word[i - 1] - 48)) + 1;
         }
     }
     cout << answ;
