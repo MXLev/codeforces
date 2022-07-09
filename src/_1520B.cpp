@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int calculate(int n){
+void calculate(int n){
     int asnw = 9;
     for (int i = 10; i <= n; i += 1) {
         bool isOrdinary = false;
